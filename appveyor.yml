@@ -38,7 +38,7 @@ for:
     - image: Visual Studio 2019
 
   after_build:
-  - 7z a gym-windows.zip %CD%\dist\*.msi
+  # - 7z a gym-windows.zip %CD%\dist\*.msi
 
   artifacts:
   - path: gym-windows.zip
@@ -52,7 +52,7 @@ for:
     - image: macOS
 
   after_build:
-  - tar -czvf gym-macos.tar.gz -C dist gym.app
+  # - tar -czvf gym-macos.tar.gz -C dist gym.app
 
   artifacts:
   - path: gym-macos.tar.gz
@@ -66,7 +66,7 @@ for:
     - image: Ubuntu
 
   after_build:
-  - tar -czvf gym-linux.tar.gz -C dist counter
+  # - tar -czvf gym-linux.tar.gz -C dist gym
 
   artifacts:
   - path: gym-linux.tar.gz
