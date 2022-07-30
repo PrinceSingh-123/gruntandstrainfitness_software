@@ -1,7 +1,7 @@
 image:
 - Visual Studio 2019
-- macOS
-- Ubuntu
+# - macOS
+# - Ubuntu
 
 
 skip_branch_with_pr: true
@@ -13,11 +13,11 @@ environment:
 
 install:
 - pip3 install --upgrade briefcase --user
-- pip3 install --upgrade pillow --user
 
 build_script:
 - briefcase create
 - briefcase build
+- briefcase package
 
 test: off
 
@@ -38,7 +38,7 @@ for:
     - image: Visual Studio 2019
 
   after_build:
-  # - 7z a gym-windows.zip %CD%\dist\*.msi
+  - 7z a gym-windows.zip %CD%\dist\*.msi
 
   artifacts:
   - path: gym-windows.zip
@@ -46,27 +46,27 @@ for:
 #
 #   macOS package
 # 
--
-  matrix:
-    only:
-    - image: macOS
+# -
+#   matrix:
+#     only:
+#     - image: macOS
 
-  after_build:
-  # - tar -czvf gym-macos.tar.gz -C dist gym.app
+#   after_build:
+#   # - tar -czvf gym-macos.tar.gz -C dist gym.app
 
-  artifacts:
-  - path: gym-macos.tar.gz
+#   artifacts:
+#   - path: gym-macos.tar.gz
 
 #
 #   Linux package
 # 
--
-  matrix:
-    only:
-    - image: Ubuntu
+# -
+#   matrix:
+#     only:
+#     - image: Ubuntu
 
-  after_build:
-  # - tar -czvf gym-linux.tar.gz -C dist gym
+#   after_build:
+#   # - tar -czvf gym-linux.tar.gz -C dist gym
 
-  artifacts:
-  - path: gym-linux.tar.gz
+#   artifacts:
+#   - path: gym-linux.tar.gz
