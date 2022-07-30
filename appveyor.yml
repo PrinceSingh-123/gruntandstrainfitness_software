@@ -12,8 +12,8 @@ environment:
     secure: Ti46nPnZgFh0nRteU6ma0EhJnCTW7PaMn9hnnewZl4gBFPyRQnXNCwGog02+MRLX
 
 install:
-- pip install briefcase
-- pip install pillow
+- pip3 install --upgrade briefcase --user
+- pip3 install --upgrade pillow --user
 
 build_script:
 - briefcase create
