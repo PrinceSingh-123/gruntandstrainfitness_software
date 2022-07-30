@@ -1,0 +1,47 @@
+[tool.briefcase]
+project_name = "gym"
+bundle = "gym.com"
+version = "0.0.1"
+url = "https://com.gym/gym"
+license = "MIT license"
+author = 'Jane Developer'
+author_email = "jane@com.gym"
+
+[tool.briefcase.app.gym]
+formal_name = "gym"
+description = "gym"
+icon = "src/gym/resources/gym"
+sources = ['src/gym']
+requires = [
+    'pyside2>=5.15.2',
+    'pillow',
+    
+]
+
+
+[tool.briefcase.app.gym.macOS]
+requires = [
+    'std-nslog~=1.0.0'
+]
+
+[tool.briefcase.app.gym.linux]
+requires = []
+
+[tool.briefcase.app.gym.linux.linuxdeploy]
+system_requires = []
+linuxdeploy_plugins = []
+
+[tool.briefcase.app.gym.linux.flatpak]
+flatpak_runtime = 'org.kde.Platform'
+flatpak_runtime_version = '6.3'
+flatpak_sdk = 'org.kde.Sdk'
+
+[tool.briefcase.app.gym.windows]
+requires = []
+
+# Mobile deployments
+[tool.briefcase.app.gym.iOS]
+supported = false
+
+[tool.briefcase.app.gym.android]
+supported = false

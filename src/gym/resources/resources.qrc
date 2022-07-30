@@ -1,0 +1,17 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/calendar-month.png</file>
+    <file>icons/image.png</file>
+    <file>icons/bin.png</file>
+    <file>icons/book.png</file>
+    <file>icons/calendar.png</file>
+    <file>icons/cross.png</file>
+    <file>icons/home.png</file>
+    <file>icons/plus.png</file>
+    <file>icons/receipt.png</file>
+    <file>icons/script.png</file>
+    <file>icons/tick.png</file>
+    <file>icons/user.png</file>
+    <file>icons/user-business.png</file>
+  </qresource>
+</RCC>
