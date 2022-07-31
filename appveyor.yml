@@ -52,7 +52,7 @@ for:
     - image: macOS
 
   after_build:
-  - tar -czvf gym-macos.tar.gz -C macOS gym.app
+  - tar -czvf gym-macos.tar.gz macOS
 
   artifacts:
   - path: gym-macos.tar.gz
@@ -66,7 +66,7 @@ for:
     - image: Ubuntu
 
   after_build:
-  - tar -czvf gym-linux.tar.gz -C linux gym
+  - tar -czvf gym-linux.tar.gz linux
 
   artifacts:
   - path: gym-linux.tar.gz
