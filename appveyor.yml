@@ -1,5 +1,5 @@
 image:
-- Windows Server 2019
+- PowerShell Core
 # - macOS
 # - Ubuntu
 
@@ -35,7 +35,7 @@ for:
 -
   matrix:
     only:
-    - image: Windows Server 2019
+    - image: PowerShell Core
 
   after_build:
   - 7z a gym-windows.zip %CD%\dist\*.msi
