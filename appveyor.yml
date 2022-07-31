@@ -16,7 +16,7 @@ install:
 
 build_script:
 - briefcase create
-# - briefcase build
+- briefcase build
 # - briefcase package
 
 test: off
