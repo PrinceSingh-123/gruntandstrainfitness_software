@@ -1,5 +1,5 @@
 image:
-- PowerShell Core
+- Visual Studio 2019
 # - macOS
 # - Ubuntu
 
@@ -35,7 +35,7 @@ for:
 -
   matrix:
     only:
-    - image: PowerShell Core
+    - image: Visual Studio 2019
 
   after_build:
   - 7z a gym-windows.zip %CD%\dist\*.msi
